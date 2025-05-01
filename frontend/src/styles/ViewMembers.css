@@ -1,0 +1,174 @@
+.view-members-page {
+    background: #f5f5f5 url('https://www.transparenttextures.com/patterns/wave.png') repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.header {
+    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+    color: white;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease-out;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.header h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    font-weight: 400;
+    opacity: 0.9;
+    animation: fadeIn 1s ease-in;
+}
+
+.members-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    justify-items: center;
+}
+
+.member-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1rem 0;
+    /* Adjusted margin to center vertically */
+    border: 3px solid #3182ce;
+    transition: border-color 0.3s ease;
+    object-fit: cover;
+}
+
+.member-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.member-card:hover .member-image {
+    border-color: #2b6cb0;
+}
+
+.member-card h3 {
+    margin: 0.3rem 0;
+    /* Reduced margin for tighter spacing */
+    font-size: 1.5rem;
+    color: #2d3748;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.member-card p {
+    margin: 0.3rem 0;
+    /* Reduced margin for tighter spacing */
+    color: #4a5568;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.view-details-button {
+    background: #3182ce;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.view-details-button:hover {
+    background: #2b6cb0;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.back-button {
+    background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #5a6268 0%, #4a5568 100%);
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
